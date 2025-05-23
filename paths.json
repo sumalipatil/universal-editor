@@ -2,7 +2,10 @@
   "mappings": [
     "/content/universal-editor/:/",
     "/content/universal-editor/configuration:/.helix/config.json",
-    "/content/universal-editor/metadata:/metadata.json"
+    "/content/universal-editor/headers:/.helix/headers.json",
+    "/content/universal-editor/metadata:/metadata.json",
+    "/content/universal-editor/placeholders:/placeholders.json",
+    "/content/universal-editor.resource/enrichment/enrichment.json:/enrichment/enrichment.json"
   ],
   "includes": [
     "/content/universal-editor/"
