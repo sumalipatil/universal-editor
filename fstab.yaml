@@ -3,7 +3,6 @@ mountpoints:
     url: "https://author-p105957-e1283031.adobeaemcloud.com/bin/franklin.delivery/sumalipatil/universal-editor/main"
     type: "markup"
     suffix: ".html"
-    x-api-key: "f75115a1f5c64e61a50e050543da9545"
 folders:
   /products/: /products/default
   
