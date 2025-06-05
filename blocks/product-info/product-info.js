@@ -15,7 +15,7 @@ export default function decorate(block) {
         const res = await fetch('https://27420-auspost-integratiton.adobeioruntime.net/api/v1/web/shipping/fetch-shipping-prices', {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
             'Authorization': 'Bearer 22FADE005721F8257F000101'
           },
           body: JSON.stringify({
