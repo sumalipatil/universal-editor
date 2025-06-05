@@ -15,32 +15,53 @@ export default function decorate(block) {
 
   // Button click handler
   button.addEventListener('click', async () => {
-    try {
-          const res = await fetch('https://27420-auspost-integratiton.adobeioruntime.net/api/v1/web/shipping/fetch-shipping-prices', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Authorization': 'Bearer 22FADE005721F8257F000101'
-            },
-            body: JSON.stringify({
-                  "title": "I am Hero",
-                  "userId": 5
-            })
-          });
+    const endpoint = 'https://edge-sandbox-graph.adobe.io/api/0804747e-2944-4ef2-b5f7-e1b7a1d6bc32/graphql';
+    const token = 'f75115a1f5c64e61a50e050543da9545';
 
-          if (!res.ok) throw new Error('API call failed');
+    const firstname = block.dataset.firstname || 'John';
+    const lastname = block.dataset.lastname || 'Doe';
+    const email = block.dataset.email || 'john.doe@example.com';
+    const password = block.dataset.password || 'MySecurePassword123';
 
-          const result = await res.json();
-
-            return {
-              statusCode: 200,
-              body: result
-            };
-
-        } catch (error) {
-          console.error('Error:', error);
-          resultDiv.innerHTML = `<p>Failed to load product information.</p>`;
+    const query = `
+      mutation {
+        createCustomerV2(
+          input: {
+            firstname: "${firstname}"
+            lastname: "${lastname}"
+            email: "${email}"
+            password: "${password}"
+          }
+        ) {
+          customer {
+            firstname
+            lastname
+            email
+            is_subscribed
+          }
         }
+      }
+    `;
 
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({ query }),
+      });
+
+      const data = await response.json();
+
+      if (data.errors) {
+        resultDisplay.textContent = `❌ Error:\n${JSON.stringify(data.errors, null, 2)}`;
+      } else {
+        resultDisplay.textContent = `✅ Customer Created:\n${JSON.stringify(data.data, null, 2)}`;
+      }
+    } catch (error) {
+      resultDisplay.textContent = `⚠️ Network Error: ${error.message}`;
+    }
   });
 }
