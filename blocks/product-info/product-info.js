@@ -16,14 +16,15 @@ export default function decorate(block) {
   // Button click handler
   button.addEventListener('click', async () => {
     const endpoint = 'https://27420-auspost-integratiton.adobeioruntime.net/api/v1/web/shipping/fetch-shipping-prices';
-    const token = 'eyJhbGciOiJSUzI1NiIsIng1dSI6Imltc19uYTEta2V5LWF0LTEuY2VyIiwia2lkIjoiaW1zX25hMS1rZXktYXQtMSIsIml0dCI6ImF0In0.eyJpZCI6IjE3NDkxMjU2NzE4ODBfMGIwOTM5MGMtZDlmYy00YjZiLWIxOGItZmQwNDg3YTBhYTlkX3V3MiIsIm9yZyI6IjIyRkFERTAwNTcyMUY4MjU3RjAwMDEwMUBBZG9iZU9yZyIsInR5cGUiOiJhY2Nlc3NfdG9rZW4iLCJjbGllbnRfaWQiOiI3NzE4NWExZTdkZDE0M2NiYWE0Mzc2ODM3MTc4MGM4MiIsInVzZXJfaWQiOiI5OTNCMjI3RTY4MkIyQkVDMEE0OTVDMjdAdGVjaGFjY3QuYWRvYmUuY29tIiwiYXMiOiJpbXMtbmExIiwiYWFfaWQiOiI5OTNCMjI3RTY4MkIyQkVDMEE0OTVDMjdAdGVjaGFjY3QuYWRvYmUuY29tIiwiY3RwIjozLCJtb2kiOiJhMjllNjI0OSIsImV4cGlyZXNfaW4iOiI4NjQwMDAwMCIsInNjb3BlIjoiYWRvYmVpb19hcGksb3BlbmlkLHJlYWRfY2xpZW50X3NlY3JldCxBZG9iZUlELGFkZGl0aW9uYWxfaW5mby5yb2xlcyxtYW5hZ2VfY2xpZW50X3NlY3JldHMscmVhZF9vcmdhbml6YXRpb25zLGFkZGl0aW9uYWxfaW5mby5wcm9qZWN0ZWRQcm9kdWN0Q29udGV4dCxldmVudF9yZWNlaXZlcl9hcGkiLCJjcmVhdGVkX2F0IjoiMTc0OTEyNTY3MTg4MCJ9.RohKldn61dsPz3_6kBKHA0Fz-03y3-R6QBxPAYIUka_K0d_Y6raODrZ4_0iDxJsZTS0NTETIRzgjWTDBIBTtPd_yg_8YO6aWtC37yu56mzY-1sksJcAen9pf3Y31EBOFduDAVOKiExG8h5bi2ryB388sPPb9c1kGlWMQUtl42RAInlNmOVD-V0xCB6q28fAWQFGdfwp-dVgcebZ38zrBG6RFTEyrxWhKTzVFeLlssRrU_OqCRdiWQsbppTLsn8CLLxM007YakK9aPH2S1KL90tvRpE2amvouUcXfrrdOosm-3tg_qEtMBNYRPUvaCKSre38wSdi5OdBUSqk4shlPpw';
+    const token = 'eyJhbGciOiJSUzI1NiIsIng1dSI6Imltc19uYTEta2V5LWF0LTEuY2VyIiwia2lkIjoiaW1zX25hMS1rZXktYXQtMSIsIml0dCI6ImF0In0.eyJpZCI6IjE3NDkxMjYyNTgwMDdfNzY5YjQ4OTUtODhkMS00Y2FkLTg3OGUtMGFkYzdlMGNmZjliX3V3MiIsIm9yZyI6IjIyRkFERTAwNTcyMUY4MjU3RjAwMDEwMUBBZG9iZU9yZyIsInR5cGUiOiJhY2Nlc3NfdG9rZW4iLCJjbGllbnRfaWQiOiI3NzE4NWExZTdkZDE0M2NiYWE0Mzc2ODM3MTc4MGM4MiIsInVzZXJfaWQiOiI5OTNCMjI3RTY4MkIyQkVDMEE0OTVDMjdAdGVjaGFjY3QuYWRvYmUuY29tIiwiYXMiOiJpbXMtbmExIiwiYWFfaWQiOiI5OTNCMjI3RTY4MkIyQkVDMEE0OTVDMjdAdGVjaGFjY3QuYWRvYmUuY29tIiwiY3RwIjozLCJtb2kiOiJjZDA4MDQ1IiwiZXhwaXJlc19pbiI6Ijg2NDAwMDAwIiwic2NvcGUiOiJhZG9iZWlvX2FwaSxvcGVuaWQscmVhZF9jbGllbnRfc2VjcmV0LEFkb2JlSUQsYWRkaXRpb25hbF9pbmZvLnJvbGVzLG1hbmFnZV9jbGllbnRfc2VjcmV0cyxyZWFkX29yZ2FuaXphdGlvbnMsYWRkaXRpb25hbF9pbmZvLnByb2plY3RlZFByb2R1Y3RDb250ZXh0LGV2ZW50X3JlY2VpdmVyX2FwaSIsImNyZWF0ZWRfYXQiOiIxNzQ5MTI2MjU4MDA3In0.RuwJ_vZYLmBBVbgTphnB4yVPsiBoA7_Oj_H21HKsGYzDs17O-DRtTwflmT3EZPHwMlcLIx8J0jWi1i2sIg0H-e179Kdc3Xiy8k_mFjpcXR9i8SEWGeGMdXUB0obGC_fSBpmfx3jQ1wMDTtKzOA27p2PURM4lSxOvxY9hhRmCCBqmR_9wkzGTtDoSgqxIlc_cKjueP-JOUcBNvVcFWzvWRMXPF6x5gnvfWWczaezbAF_tc6YWEoy3QblLbQzKN9S4r_19zS5Icu-4FWJDn0Fg9Ofi7KW2FfJXnklClSH71Dqig8ScoHYxkzFkP_9XUW01v6Z47KuwTTBdA7I8RiNR1g';
 
     try {
       const response = await fetch(endpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
+          'Authorization': `Bearer ${token}`,
+          'x-gw-ims-org-id': '22FADE005721F8257F000101@AdobeOrg';
         },
         body: JSON.stringify({
               "title": "I am Hero",
