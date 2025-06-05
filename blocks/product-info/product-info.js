@@ -1,4 +1,3 @@
-
 export default function decorate(block) {
 
   block.innerHTML = `
@@ -10,7 +9,7 @@ export default function decorate(block) {
   const resultDiv = block.querySelector('.product-result');
 
   button.addEventListener('click', async () => {
-    resultDiv.innerHTML = '<p>Loading product details...</p>';
+    //resultDiv.innerHTML = '<p>Loading product details...</p>';
 
     try {
         const res = await fetch('https://27420-auspost-integratiton.adobeioruntime.net/api/v1/web/shipping/fetch-shipping-prices', {
@@ -38,8 +37,5 @@ export default function decorate(block) {
         console.error('Error:', error);
         resultDiv.innerHTML = `<p>Failed to load product information.</p>`;
       }
-
-
-
   });
 }
