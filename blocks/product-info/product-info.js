@@ -31,7 +31,7 @@ export default function decorate(block) {
 
     const query = {
       title: 'I am Hero',
-      userId: 5
+      userId: 5,
     };
 
     try {
