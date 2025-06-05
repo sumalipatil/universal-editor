@@ -29,18 +29,18 @@ export default function decorate(block) {
      + 'Y9hhRmCCBqmR_9wkzGTtDoSgqxIlc_cKjueP-JOUcBNvVcFWzvWRMXPF6x5gnvfWWczaezbAF_tc6YWEoy3QblLbQzKN9S4r_19zS5Icu-4FWJDn0F'
      + 'g9Ofi7KW2FfJXnklClSH71Dqig8ScoHYxkzFkP_9XUW01v6Z47KuwTTBdA7I8RiNR1g';
 
-     const query = {
-        title: "I am Hero",
-        userId: 5
-     };
+    const query = {
+      title: 'I am Hero',
+      userId: 5
+    };
 
     try {
       const response = await fetch(endpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Authorization : `Bearer ${token}`,
-          'x-gw-ims-org-id' : '22FADE005721F8257F000101@AdobeOrg'
+          Authorization: `Bearer ${token}`,
+          'x-gw-ims-org-id': '22FADE005721F8257F000101@AdobeOrg',
         },
         body: JSON.stringify({ query }),
       });
