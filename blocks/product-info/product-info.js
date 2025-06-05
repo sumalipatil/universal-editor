@@ -1,3 +1,4 @@
+
 export default function decorate(block) {
 
   block.innerHTML = `
@@ -23,19 +24,22 @@ export default function decorate(block) {
                 "userId": 5
           })
         });
+
+        if (!res.ok) throw new Error('API call failed');
+
+        const result = await res.json();
+
+          return {
+            statusCode: 200,
+            body: result
+          };
+
       } catch (error) {
         console.error('Error:', error);
         resultDiv.innerHTML = `<p>Failed to load product information.</p>`;
       }
 
-        if (!res.ok) throw new Error('API call failed');
 
-          const result = await res.json();
-
-            return {
-              statusCode: 200,
-              body: result
-            };
 
   });
 }
