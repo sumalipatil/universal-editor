@@ -1,4 +1,4 @@
-xport default function decorate(block) {
+export default function decorate(block) {
   // Create Button
   const button = document.createElement('button');
   button.textContent = 'Create Customer via API Mesh';
