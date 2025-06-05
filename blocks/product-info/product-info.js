@@ -17,7 +17,7 @@ export default function decorate(block) {
   button.addEventListener('click', async () => {
     const endpoint = 'https://27420-auspost-integratiton.adobeioruntime.net/api/v1/web/shipping/fetch-shipping-prices';
 
-    const token = '';
+    const token = 'f75115a1f5c64e61a50e050543da9545';
 
     try {
       const response = await fetch(endpoint, {
