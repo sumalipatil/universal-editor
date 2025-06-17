@@ -43,7 +43,8 @@
       "product-teaser",
       "product-recommendations",
       "product-info",
-      "aem-appbuilder"
+      "aem-appbuilder",
+      "list"
     ]
   },
   {
@@ -62,7 +63,8 @@
       "product-recommendations",
       "product-list-page",
       "product-info",
-      "aem-appbuilder"
+      "aem-appbuilder",
+      "list"
     ]
   },
   {
@@ -81,7 +83,8 @@
       "product-teaser",
       "product-recommendations",
       "product-info",
-      "aem-appbuilder"
+      "aem-appbuilder",
+      "list"
     ]
   },
   {
@@ -113,7 +116,8 @@
       "product-teaser",
       "product-recommendations",
       "product-info",
-      "aem-appbuilder"
+      "aem-appbuilder",
+      "list"
     ]
   },
   {
@@ -137,7 +141,8 @@
       "product-teaser",
       "product-recommendations",
       "product-info",
-      "aem-appbuilder"
+      "aem-appbuilder",
+      "list"
     ]
   },
   {
