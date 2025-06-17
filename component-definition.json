@@ -55,6 +55,20 @@
               }
             }
           }
+        },
+        {
+          "title": "Lists",
+          "id": "list",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/list/v1/list",
+                "template": {
+                  "model": "list"
+                }
+              }
+            }
+          }
         }
       ]
     },
