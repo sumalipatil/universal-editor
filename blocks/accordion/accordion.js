@@ -5,5 +5,9 @@
  */
 
 export default function decorate(block) {
-  console.log("Accordion Component");
+  const button = document.createElement('button');
+  button.textContent = 'Accordion Components';
+  button.style.padding = '1em';
+  button.style.marginBottom = '1em';
+  block.appendChild(button);
 }
