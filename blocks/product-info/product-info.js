@@ -1,7 +1,7 @@
 export default function decorate(block) {
   // Create Button
   const button = document.createElement('button');
-  button.textContent = 'Create Customer via API Mesh';
+  button.textContent = 'Create Customer via API Meshing';
   button.style.padding = '1em';
   button.style.marginBottom = '1em';
   block.appendChild(button);
