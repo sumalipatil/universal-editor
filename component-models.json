@@ -57,16 +57,6 @@
     ]
   },
   {
-    "id": "accordion",
-    "fields": [
-      {
-        "component": "accordion",
-        "name": "title",
-        "label": "Title"
-      }
-    ]
-  },
-  {
     "id": "button",
     "fields": [
       {
