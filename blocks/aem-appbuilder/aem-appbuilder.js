@@ -1,7 +1,7 @@
 export default function decorate(block) {
   // Create Button
   const button = document.createElement('button');
-  button.textContent = 'AEM to App Builder Integration';
+  button.textContent = 'AEM to App Builder';
   button.style.padding = '1em';
   button.style.marginBottom = '1em';
   block.appendChild(button);
