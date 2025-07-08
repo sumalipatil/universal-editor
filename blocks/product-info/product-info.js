@@ -15,45 +15,40 @@ export default function decorate(block) {
 
   // Button click handler
   button.addEventListener('click', async () => {
-    const endpoint = 'https://27420-auspost-integratiton.adobeioruntime.net/api/v1/web/shipping/fetch-shipping-prices';
 
-    const token = 'eyJhbGciOiJSUzI1NiIsIng1dSI6Imltc19uYTEta2V5LWF0LTEuY2VyIiwia2lkIjoiaW1zX25hMS1rZXktYXQtMSIsIml0dCI'
-    + '6ImF0In0.eyJpZCI6IjE3NTEzNzk1NTI3NDVfYzEwNWFkYzktYWM4MC00NzkyLWIzMGUtNzllNzYwNzNhYzJmX3V3MiIsIm9yZyI6IjIyRkFERTA'
-    + 'wNTcyMUY4MjU3RjAwMDEwMUBBZG9iZU9yZyIsInR5cGUiOiJhY2Nlc3NfdG9rZW4iLCJjbGllbnRfaWQiOiI3NzE4NWExZTdkZDE0M2NiYWE0Mzc2'
-    + 'ODM3MTc4MGM4MiIsInVzZXJfaWQiOiI5OTNCMjI3RTY4MkIyQkVDMEE0OTVDMjdAdGVjaGFjY3QuYWRvYmUuY29tIiwiYXMiOiJpbXMtbmExIiwi'
-    + 'YWFfaWQiOiI5OTNCMjI3RTY4MkIyQkVDMEE0OTVDMjdAdGVjaGFjY3QuYWRvYmUuY29tIiwiY3RwIjozLCJtb2kiOiI1MjVkMWY2ZSIsImV4cGly'
-    + 'ZXNfaW4iOiI4NjQwMDAwMCIsInNjb3BlIjoiYWRvYmVpb19hcGksb3BlbmlkLHJlYWRfY2xpZW50X3NlY3JldCxBZG9iZUlELGFkZGl0aW9uYWxfa'
-    + 'W5mby5yb2xlcyxtYW5hZ2VfY2xpZW50X3NlY3JldHMscmVhZF9vcmdhbml6YXRpb25zLGFkZGl0aW9uYWxfaW5mby5wcm9qZWN0ZWRQcm9kdWN0Q'
-    + '29udGV4dCxldmVudF9yZWNlaXZlcl9hcGkiLCJjcmVhdGVkX2F0IjoiMTc1MTM3OTU1Mjc0NSJ9.AgDst1DARI7YoiXF7MMzqa4ztHGNIPhNszJC'
-    + 'mBGjZfN-XLdm72CezK1kj-RlOJM4B6-FNfKUSsLSf71gPyja3iwii_eGrU7Yg1TVporrM1TwNNiYiFjednBkXoPHNnkW8IMnT_j_39lcqpyQImF'
-    + 'pJpsGLlXSPJW9wvzUXAEA2ZYxvUmpZakpnOKtcF_wDSEjl4eXSXYZu0t6TUyiW8IV130JgTirzQdIaGEjE_ajc_FmMfwgnVJuioR0Ej58mX5Emle'
-    + 'wWPSekvSZHd-7ijlwYcTObLiGofxrdI-OkiHDfa_xVaW7A_GTa0OgExxTBhLRLE7zLGLC2JY5KqjEKL3hCw';
+     try {
+         const cfResponse = await fetch('/content/dam/content-fragments/hero-banner.json');
+         const cfData = await cfResponse.json();
+         const token = 'eyJhbGciOiJSUzI1NiIsIng1dSI6Imltc19uYTEta2V5LWF0LTEuY2VyIiwia2lkIjoiaW1zX25hMS1rZXktYXQtMSIsI'
+         + 'ml0dCI6ImF0In0.eyJpZCI6IjE3NTE5NzA5MDkxMzRfMDIwYTlmY2YtOWZiNC00NmI3LTg4YWYtYTVjYmJiY2JiYjAxX3V3MiIsIm9yZyI'
+         + '6IjIyRkFERTAwNTcyMUY4MjU3RjAwMDEwMUBBZG9iZU9yZyIsInR5cGUiOiJhY2Nlc3NfdG9rZW4iLCJjbGllbnRfaWQiOiI3NzE4NWEx'
+         + 'ZTdkZDE0M2NiYWE0Mzc2ODM3MTc4MGM4MiIsInVzZXJfaWQiOiI5OTNCMjI3RTY4MkIyQkVDMEE0OTVDMjdAdGVjaGFjY3QuYWRvYmUuY'
+         + '29tIiwiYXMiOiJpbXMtbmExIiwiYWFfaWQiOiI5OTNCMjI3RTY4MkIyQkVDMEE0OTVDMjdAdGVjaGFjY3QuYWRvYmUuY29tIiwiY3RwIjo'
+         + 'zLCJtb2kiOiI0MGY1NmZhNSIsImV4cGlyZXNfaW4iOiI4NjQwMDAwMCIsInNjb3BlIjoiYWRvYmVpb19hcGksb3BlbmlkLHJlYWRfY2xp'
+         + 'ZW50X3NlY3JldCxBZG9iZUlELGFkZGl0aW9uYWxfaW5mby5yb2xlcyxtYW5hZ2VfY2xpZW50X3NlY3JldHMscmVhZF9vcmdhbml6YXRpb'
+         + '25zLGFkZGl0aW9uYWxfaW5mby5wcm9qZWN0ZWRQcm9kdWN0Q29udGV4dCxldmVudF9yZWNlaXZlcl9hcGkiLCJjcmVhdGVkX2F0IjoiMTc'
+         + '1MTk3MDkwOTEzNCJ9.WVAXX3ymTV_5DVxS4vah9rSVhvIA1T5grYIjnA-g2865sVTGm2jwvcJS5MRE246hU7uFd3FYmRbSximDbYk-TeI9'
+         + '0SLJwgFQLBBTzKEUt5VDxye5Z-p701zzggolKSeWDVVWPe5zeHs1T3KCi5hsWKWiJHFRix_hRJ0E_jzbwTtmEgC_N3tUBQkS80DYI51A-S'
+         + 'NLodPuzbLld8UVerZJf06iJne0gNtod5Wt2LA5DL2I32JdGSQdETZjcnWKmySnd6b_3o0IsUfd5olgv8hcn9_I4o57F4HXSU3zL55bmcgq'
+         + 'CclMzldUj5o976483pA1aKFWBkDopo_7-XJpUlE7lQ';
 
-    const query = {
-      title: 'I am Hero',
-      userId: 5,
-    };
-
-    try {
-      const response = await fetch(endpoint, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
-          'x-gw-ims-org-id': '22FADE005721F8257F000101@AdobeOrg',
+         const appBuilderResponse = await fetch('https://27420-auspost-integratiton.adobeioruntime.net/api/v1/web/shipping/fetch-shipping-prices', {
+          method: 'POST',
+          headers: {
+           'Content-Type': 'application/json',
+           Authorization: `Bearer ${token}`,
+           'x-gw-ims-org-id': '22FADE005721F8257F000101@AdobeOrg',
         },
-        body: JSON.stringify({ query }),
-      });
+          body: JSON.stringify({ cfData }),
+        });
 
-      const data = await response.json();
+        const result = await appBuilderResponse.json();
+        console.log('App Builder Response:', result);
+        alert('T & C sent successfully!');
 
-      if (data.errors) {
-        resultDisplay.textContent = `❌ Error:\n${JSON.stringify(data.errors, null, 2)}`;
-      } else {
-        resultDisplay.textContent = `✅ Customer Created:\n${JSON.stringify(data.data, null, 2)}`;
-      }
-    } catch (error) {
-      resultDisplay.textContent = `⚠️ Network Error: ${error.message}`;
-    }
+        } catch (error) {
+          console.error('Error sending data:', error);
+          alert('Failed to T & C data.');
+     }
   });
 }
