@@ -28,7 +28,13 @@
       "aem-appbuilder",
       "commerce-checkout",
       "product-details",
-      "commerce-cart"
+      "commerce-cart",
+      "commerce-shipping-status",
+      "commerce-search-order",
+      "commerce-addresses",
+      "commerce-return-list",
+      "commerce-order-product-list",
+      "commerce-order-status"
     ]
   },
   {
@@ -48,7 +54,13 @@
       "aem-appbuilder",
       "commerce-checkout",
       "product-details",
-      "commerce-cart"
+      "commerce-cart",
+      "commerce-shipping-status",
+      "commerce-search-order",
+      "commerce-addresses",
+      "commerce-return-list",
+      "commerce-order-product-list",
+      "commerce-order-status"
     ]
   },
   {
@@ -70,7 +82,13 @@
       "aem-appbuilder",
       "commerce-checkout",
       "product-details",
-      "commerce-cart"
+      "commerce-cart",
+      "commerce-shipping-status",
+      "commerce-search-order",
+      "commerce-addresses",
+      "commerce-return-list",
+      "commerce-order-product-list",
+      "commerce-order-status"
     ]
   },
   {
@@ -92,7 +110,13 @@
       "aem-appbuilder",
       "commerce-checkout",
       "product-details",
-      "commerce-cart"
+      "commerce-cart",
+      "commerce-shipping-status",
+      "commerce-search-order",
+      "commerce-addresses",
+      "commerce-return-list",
+      "commerce-order-product-list",
+      "commerce-order-status"
     ]
   },
   {
@@ -127,7 +151,13 @@
       "aem-appbuilder",
       "commerce-checkout",
       "product-details",
-      "commerce-cart"
+      "commerce-cart",
+      "commerce-shipping-status",
+      "commerce-search-order",
+      "commerce-addresses",
+      "commerce-return-list",
+      "commerce-order-product-list",
+      "commerce-order-status"
     ]
   },
   {
